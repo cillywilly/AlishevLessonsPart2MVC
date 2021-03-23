@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>New Person</title>
@@ -10,6 +10,7 @@
     <label for="name">Enter name : </label>
     <input type="text" th:field="*{name}" id="name"/>
     <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+    <div style="color:red" th:if="${#fields.hasErrors('Name')}" th:errors="*{Name}">Name error</div>
     <br/>
     <label for="age">Enter age : </label>
     <input type="text" th:field="*{age}" id="age"/>
